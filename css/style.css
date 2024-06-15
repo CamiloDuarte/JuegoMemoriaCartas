@@ -1,0 +1,53 @@
+body{
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mesa{
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+.carta{
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.25), 4px 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  background-color: red;
+  /*Para voltear carta, esta es el frente*/
+  position: relative;
+  perspective: 500px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+
+.contenido-carta{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.25), 4px 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  /*Para voltearla carta, esta es la parte de atras*/
+  position: absolute;
+  transform: rotateY(180deg); 
+  backface-visibility: hidden;
+}
+
+.carta:hover{
+  transform: rotateY(-180deg);
+}
