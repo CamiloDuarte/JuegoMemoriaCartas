@@ -2,13 +2,24 @@ var grupoCartas = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 var totalCartas = grupoCartas.concat(grupoCartas);
 
+function barajaCartas() {
+  var resultado;
+  resultado = totalCartas.sort(
+    function () {
+      return 0.5 - Math.random();
+    }
+  )
+  return resultado;
+}
+
 function reparteCartas() {
 
   var mesa = document.querySelector("#mesa");
+  var cartasBarajadas = barajaCartas();
 
   mesa.innerHTML = "";
 
-  totalCartas.forEach(function (elemento) {
+  cartasBarajadas.forEach(function (elemento) {
 
     var carta = document.createElement("div");
 
