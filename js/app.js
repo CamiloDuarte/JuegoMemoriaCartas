@@ -20,4 +20,12 @@ function reparteCartas() {
 
 }
 
+function descubrir() {
+  this.classList.add("descubierta")
+}
+
 reparteCartas();
+
+document.querySelectorAll(".carta").forEach(function (elemento) {
+  elemento.addEventListener("click", descubrir);
+});

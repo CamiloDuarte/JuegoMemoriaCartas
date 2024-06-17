@@ -51,6 +51,6 @@ body{
   backface-visibility: hidden;
 }
 
-.carta:hover{
+.carta.descubierta{
   transform: rotateY(-180deg);
 }
