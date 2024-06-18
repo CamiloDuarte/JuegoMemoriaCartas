@@ -23,7 +23,7 @@ function reparteCartas() {
 
     var carta = document.createElement("div");
 
-    carta.innerHTML = '<div class="carta">' +
+    carta.innerHTML = '<div class="carta" data-valor="' + elemento + '">' +
       '<div class="contenido-carta">' + elemento + '</div></div>';
 
     mesa.appendChild(carta);
@@ -32,7 +32,27 @@ function reparteCartas() {
 }
 
 function descubrir() {
-  this.classList.add("descubierta")
+  var descubiertas = document.querySelectorAll(".descubierta");
+  var dosDescubiertas;
+
+  if (descubiertas.length > 1) {
+    return
+  };
+
+  this.classList.add("descubierta");
+
+  dosDescubiertas = document.querySelectorAll(".descubierta");
+
+  if (dosDescubiertas.length < 2) {
+    return
+  }
+  console.log(dosDescubiertas)
+
+  if (dosDescubiertas[0].dataset.valor === dosDescubiertas[1].dataset.valor) {
+    console.log("acierto")
+  } else {
+    console.log("Error")
+  };
 }
 
 reparteCartas();
