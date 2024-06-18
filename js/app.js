@@ -32,7 +32,7 @@ function reparteCartas() {
 }
 
 function descubrir() {
-  var descubiertas = document.querySelectorAll(".descubierta");
+  var descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   var dosDescubiertas;
 
   if (descubiertas.length > 1) {
@@ -41,18 +41,33 @@ function descubrir() {
 
   this.classList.add("descubierta");
 
-  dosDescubiertas = document.querySelectorAll(".descubierta");
+  dosDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
   if (dosDescubiertas.length < 2) {
     return
   }
-  console.log(dosDescubiertas)
+  comparar(dosDescubiertas);
+}
+
+function comparar(dosDescubiertas) {
 
   if (dosDescubiertas[0].dataset.valor === dosDescubiertas[1].dataset.valor) {
-    console.log("acierto")
+    acertada(dosDescubiertas)
   } else {
-    console.log("Error")
+    error(dosDescubiertas);
   };
+}
+
+function acertada(dosDescubiertas) {
+  dosDescubiertas.forEach(function(elemento){
+    elemento.classList.add("acertada");
+  })
+}
+
+function error(dosDescubiertas) {
+  dosDescubiertas.forEach(function(elemento){
+    elemento.classList.remove("descubierta");
+});
 }
 
 reparteCartas();

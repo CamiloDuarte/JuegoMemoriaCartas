@@ -54,3 +54,6 @@ body{
 .carta.descubierta{
   transform: rotateY(-180deg);
 }
+.acertada {
+  opacity: 0;
+}
