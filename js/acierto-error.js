@@ -5,8 +5,18 @@ function acertada(dosDescubiertas) {
 }
 
 function error(dosDescubiertas) {
+
   dosDescubiertas.forEach(function (elemento) {
-    elemento.classList.remove("descubierta");
+    elemento.classList.add("error");
   });
+
+  setTimeout(function () {
+
+    dosDescubiertas.forEach(function (elemento) {
+      elemento.classList.remove("error");
+      elemento.classList.remove("descubierta");
+    })
+  }, 1000);
+
 }
 
