@@ -1,23 +1,56 @@
-body{
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #fafafa;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
-.mesa{
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.contadores {
+  display: flex;
+}
+
+.contador-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cabecera-titulo {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecera-num {
+  font-size: 2.2rem;
+  line-height: 75%;
+}
+
+.mesa {
   max-width: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center
+  align-content: center;
   perspective: 500px;
   flex-wrap: wrap;
   margin: auto;
 }
 
-.carta{
+.carta {
   width: 6rem;
   height: 6rem;
   display: flex;
@@ -36,7 +69,7 @@ body{
   backface-visibility: hidden;
 }
 
-.contenido-carta{
+.contenido-carta {
   background-color: white;
   width: 100%;
   height: 100%;
@@ -47,27 +80,32 @@ body{
   border-radius: 1rem;
   /*Para voltearla carta, esta es la parte de atras*/
   position: absolute;
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
   backface-visibility: hidden;
 }
 
-.carta.descubierta{
+.carta.descubierta {
   transform: rotateY(-180deg);
 }
+
 @keyframes error {
+
   10%,
   90% {
     transform: rotateY(-180deg) translateX(-1px);
   }
+
   20%,
   80% {
     transform: rotateY(-180deg) translateX(2px);
   }
+
   30%,
   50%,
   70% {
     transform: rotateY(-180deg) translateX(-4px);
   }
+
   40%,
   60% {
     transform: rotateY(-180deg) translateX(4px);
@@ -95,10 +133,14 @@ body{
   pointer-events: none;
 }
 
-.acertada .tarjeta__contenido {
+.acertada .contenido-carta {
   animation: acierto 1.3s ease-in-out forwards;
 }
 
 .error {
   animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.contadores {
+  position: relative;
 }

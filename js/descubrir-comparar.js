@@ -14,6 +14,7 @@ function descubrir() {
     return
   }
   comparar(dosDescubiertas);
+  actualizarContador();
 }
 
 function comparar(dosDescubiertas) {
