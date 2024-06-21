@@ -1,6 +1,7 @@
 function descubrir() {
   var descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   var dosDescubiertas;
+  var totalDescubiertas;
 
   if (descubiertas.length > 1) {
     return
@@ -13,8 +14,13 @@ function descubrir() {
   if (dosDescubiertas.length < 2) {
     return
   }
+
   comparar(dosDescubiertas);
   actualizarContador();
+  totalDescubiertas = document.querySelectorAll(".acertada")
+  if (totalDescubiertas.length === totalCartas.length) {
+    finalizar();
+  }
 }
 
 function comparar(dosDescubiertas) {
