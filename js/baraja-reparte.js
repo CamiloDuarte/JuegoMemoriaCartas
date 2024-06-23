@@ -1,5 +1,6 @@
-function barajaCartas() {
+function barajaCartas(lasCartas) {
   var resultado;
+  var totalCartas = lasCartas
   resultado = totalCartas.sort(
     function () {
       return 0.5 - Math.random();
@@ -8,10 +9,10 @@ function barajaCartas() {
   return resultado;
 }
 
-function reparteCartas() {
+function reparteCartas(lasCartas) {
 
   var mesa = document.querySelector("#mesa");
-  var cartasBarajadas = barajaCartas();
+  var cartasBarajadas = barajaCartas(lasCartas);
 
   mesa.innerHTML = "";
 

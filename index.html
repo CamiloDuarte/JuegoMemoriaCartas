@@ -11,19 +11,24 @@
 <body>
   <header>
     <div class="contadores">
-      <div class="contador-item">
+      <div class="contenedor-item">
         <h4 class="cabecera-titulo">Movimientos</h4>
         <div class="cabecera-num">
           <span id="mov">00</span>/<span id="mov-total">20</span>
         </div>
       </div>
-      <div class="contador-item">
+      <div class="contenedor-item">
         <h4 class="cabecera-titulo">Tiempo</h4>
         <div class="cabecera-num">
           <span id="minutos">00</span>:<span id="segundos">00</span>
         </div>
       </div>
     </div>
+    <div class="contenedor-item">
+      <h4 class="cabecera-titulo">Nivel</h4>
+      <div class="cabecera-num">
+        <span id="nivel">01</span>
+      </div>
     </div>
   </header>
   <main>
@@ -31,7 +36,8 @@
     <div class="feedback" id="feedback">
       <div class="modal">
         <h2>¡Buen trabajo!</h2>
-        <button class="reiniciar" id="reiniciar">¿Reiniciar?</button>
+        <button class="siguiente-nivel" id="siguiente-nivel">Siguiente nivel</button>
+        <button class="reiniciar">Reiniciar</button>
       </div>
     </div>
   </main>
@@ -42,6 +48,7 @@
   <script src="./js/cronometro.js"></script>
   <script src="./js/contador.js"></script>
   <script src="./js/finalizar.js"></script>
+  <script src="./js/niveles.js"></script>
   <script src="./js/iniciar.js"></script>
 </body>
 

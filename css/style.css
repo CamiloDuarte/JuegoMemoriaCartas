@@ -10,6 +10,12 @@ body {
   height: 100vh;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #EEE;
+}
+
 main {
   flex-grow: 1;
   display: flex;
@@ -21,11 +27,12 @@ main {
   display: flex;
 }
 
-.contador-item {
+.contenedor-item {
   display: flex;
   flex-direction: column;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .cabecera-titulo {
@@ -36,7 +43,7 @@ main {
 
 .cabecera-num {
   font-size: 2.2rem;
-  line-height: 75%;
+  line-height: 98%;
 }
 
 .mesa {
