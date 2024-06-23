@@ -12,7 +12,7 @@ function actualizarContador() {
 
 function maxContador() {
   var maxMov = niveles[nivelActual].maxMovimientos;
-  var maxMovText;
+  var maxMovText = maxMov;
   if (maxMov < 10) {
     maxMovText = "0" + maxMov
   }

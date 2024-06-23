@@ -16,7 +16,6 @@ function iniciar() {
   maxContador();
 }
 function reiniciarJuego() {
-  movimientos = 0;
   nivelActual = 0;
   actualizarContador();
   iniciar();
