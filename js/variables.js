@@ -19,4 +19,4 @@ var niveles = [
     maxMovimientos: 20,
   }
 ];
-
+var nivelMaximo = 1;

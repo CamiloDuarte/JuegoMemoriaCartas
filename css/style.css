@@ -152,7 +152,9 @@ main {
   position: relative;
 }
 
-.feedback {
+.feedback,
+.gameover,
+.juego-completado {
   background-color: red;
   display: none;
   position: absolute;
@@ -162,7 +164,9 @@ main {
   right: 0;
 }
 
-.feedback.visible {
+.feedback.visible,
+.gameover.visible,
+.juego-completado.visible {
   display: flex;
 }
 

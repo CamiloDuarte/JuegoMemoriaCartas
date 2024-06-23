@@ -18,11 +18,15 @@ function descubrir() {
   comparar(dosDescubiertas);
   actualizarContador();
   totalDescubiertas = document.querySelectorAll(".acertada")
+  if (totalDescubiertas.length === cartasNivel.length && nivelActual === nivelMaximo) {
+    juegoGanado();
+  }
   if (totalDescubiertas.length === cartasNivel.length) {
-    finalizar();
+    nivelGanado();
+  } else if (movimientos === niveles[nivelActual].maxMovimientos) {
+    document.querySelector(".gameover").classList.add("visible")
   }
 }
-
 function comparar(dosDescubiertas) {
 
   if (dosDescubiertas[0].dataset.valor === dosDescubiertas[1].dataset.valor) {
