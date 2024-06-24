@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="cabecera">
     <div class="contadores">
       <div class="contenedor-item">
         <h4 class="cabecera-titulo">Movimientos</h4>
@@ -17,7 +17,7 @@
           <span id="mov">00</span>/<span id="mov-total">20</span>
         </div>
       </div>
-      <div class="contenedor-item">
+      <div class="contenedor-item cronometro">
         <h4 class="cabecera-titulo">Tiempo</h4>
         <div class="cabecera-num">
           <span id="minutos">00</span>:<span id="segundos">00</span>
@@ -36,8 +36,10 @@
     <div class="bienvenida">
       <div class="modal">
         <h2 class="texto">Bienvenido al juego</h2>
-        <button id="serio">Modo serio</button>
-        <button id="relax">Modo relax</button>
+        <div class="botones-bienvenida">
+          <button id="serio" class="boton-bienvenida">Modo serio</button>
+          <button id="relax" class="boton-bienvenida">Modo relax</button>
+        </div>
       </div>
     </div>
     <div class="feedback" id="feedback">
@@ -69,6 +71,7 @@
   <script src="./js/finalizar.js"></script>
   <script src="./js/niveles.js"></script>
   <script src="./js/iniciar.js"></script>
+  <script src="./js/eventos.js"></script>
 </body>
 
 </html>

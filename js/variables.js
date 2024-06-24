@@ -1,4 +1,6 @@
+var modoRelax = false;
 var movimientos = 0;
+var cronometro;
 var grupoCartas = [["A", "B"], ["C", "D"], ["E", "F"], ["G", "H"]];
 var nivelActual = 0;
 var niveles = [

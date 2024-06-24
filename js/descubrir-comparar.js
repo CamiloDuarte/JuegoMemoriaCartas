@@ -23,8 +23,8 @@ function descubrir() {
   }
   if (totalDescubiertas.length === cartasNivel.length) {
     nivelGanado();
-  } else if (movimientos === niveles[nivelActual].maxMovimientos) {
-    document.querySelector(".gameover").classList.add("visible")
+  } else if (movimientos === niveles[nivelActual].maxMovimientos && !modoRelax) {
+    gameOver();
   }
 }
 function comparar(dosDescubiertas) {

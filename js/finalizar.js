@@ -5,3 +5,7 @@ function nivelGanado() {
 function juegoGanado() {
   document.querySelector("#juego-completado").classList.add("visible")
 }
+
+function gameOver() {
+  document.querySelector(".gameover").classList.add("visible")
+}

@@ -11,19 +11,29 @@ function iniciar() {
   document.querySelectorAll(".carta").forEach(function (elemento) {
     elemento.addEventListener("click", descubrir);
   });
+  document.querySelector(".bienvenida").classList.add("oculto")
+  document.querySelector(".cabecera").classList.add("visible")
 
-  iniciarCronometro();
+  if (!modoRelax) {
+    iniciarCronometro();
+  } else {
+    document.querySelector(".cronometro").classList.add("oculto")
+  }
   maxContador();
 }
+
 function reiniciarJuego() {
   nivelActual = 0;
   actualizarContador();
   iniciar();
 }
-iniciar();
 
-document.querySelector("#siguiente-nivel").addEventListener("click", cargaNivel)
-document.querySelectorAll(".reiniciar").forEach((elemento) => {
-  elemento.addEventListener("click", iniciar);
-})
-document.querySelector("#reiniciar-juego").addEventListener("click", reiniciarJuego)
+function juegoNormal() {
+  modoRelax = false;
+  iniciar();
+}
+
+function juegoRelax() {
+  modoRelax = true;
+  iniciar();
+}
